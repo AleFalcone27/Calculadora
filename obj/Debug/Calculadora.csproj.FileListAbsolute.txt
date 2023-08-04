@@ -1,0 +1,11 @@
+C:\Users\aleef\OneDrive\Escritorio\CODE\C#\Calculadora\bin\Debug\WindowsFormsApp1.exe.config
+C:\Users\aleef\OneDrive\Escritorio\CODE\C#\Calculadora\bin\Debug\WindowsFormsApp1.exe
+C:\Users\aleef\OneDrive\Escritorio\CODE\C#\Calculadora\bin\Debug\WindowsFormsApp1.pdb
+C:\Users\aleef\OneDrive\Escritorio\CODE\C#\Calculadora\obj\Debug\Calculadora.csproj.AssemblyReference.cache
+C:\Users\aleef\OneDrive\Escritorio\CODE\C#\Calculadora\obj\Debug\Calculadora.csproj.SuggestedBindingRedirects.cache
+C:\Users\aleef\OneDrive\Escritorio\CODE\C#\Calculadora\obj\Debug\WindowsFormsApp1.Form1.resources
+C:\Users\aleef\OneDrive\Escritorio\CODE\C#\Calculadora\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\Users\aleef\OneDrive\Escritorio\CODE\C#\Calculadora\obj\Debug\Calculadora.csproj.GenerateResource.cache
+C:\Users\aleef\OneDrive\Escritorio\CODE\C#\Calculadora\obj\Debug\Calculadora.csproj.CoreCompileInputs.cache
+C:\Users\aleef\OneDrive\Escritorio\CODE\C#\Calculadora\obj\Debug\WindowsFormsApp1.exe
+C:\Users\aleef\OneDrive\Escritorio\CODE\C#\Calculadora\obj\Debug\WindowsFormsApp1.pdb

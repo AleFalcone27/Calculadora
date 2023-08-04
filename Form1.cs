@@ -17,9 +17,10 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
-        private void getFirtsNum(object sender, EventArgs e)
+        /*
+        private int getFirtsNum()
         {
-            int FirstNum;
+
 
             if (input.Text.Length > 0)
             {
@@ -27,7 +28,8 @@ namespace WindowsFormsApp1
                 {
                     throw new InvalidOperationException("ESTA CALCULADORA NO ADMITE LETRAS");
                 }
-
+                
+                    
                 /*
                  *  CATCHEAR EL ERROR DE CUANDO ESCRIBIMOS MUCHO
                 if (input.Text.Length > 5)
@@ -35,17 +37,20 @@ namespace WindowsFormsApp1
                     input.Multiline = true;
                     input.Height = 150;
                 }
-                */
+                
+                
+        
             }
-        }
+        }*/
 
 
         private void ButttonClicked(object sender, EventArgs e)
         {
+            string numsEraseLastChar;
             string inputText;
             inputText = input.Text;
 
-            MessageBox.Show(sender.ToString());
+            //MessageBox.Show(sender.ToString());
             switch (sender.ToString())
             {
                 case "System.Windows.Forms.Button, Text: 0":
@@ -78,12 +83,32 @@ namespace WindowsFormsApp1
                 case "System.Windows.Forms.Button, Text: 9":
                     input.AppendText("9");
                     break;
-                case "System.Windows.Forms.Button, Text: <-":
+                case "System.Windows.Forms.Button, Text: <--":
+                    // Verificamos que existan mas de 0 numeros en en input evitar borrar elementos que no existen y generar un error en el codigo
+                    if (inputText.Length > 0)
+                    {
+                        numsEraseLastChar = EraseNum(inputText);
+                        input.AppendText(numsEraseLastChar);
+                    }
+                    break;
+                case "System.Windows.Forms.Button, Text: C":
+                    input.Clear();
+                    break;
+                case "System.Windows.Forms.Button, Text: +":
+                    //Sumar(inputText);
                     break;
             }
         }
 
-
+        private string EraseNum(string nums)
+        {
+            string numsEraseLastChar;
+            // Eliminamos el ultimo caracter
+            numsEraseLastChar = nums.Remove(nums.Length - 1);
+            // Limpiamos el input para poder pegar los numeros y que no se acumulen
+            input.Clear();
+            return numsEraseLastChar;
+        }
 
     }
 }
