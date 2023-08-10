@@ -18,37 +18,10 @@ namespace WindowsFormsApp1
             InitializeComponent();
         }
 
-
         int num1;
         int num2;
         string res;
         string operation;
-
-        
-        private int GetFirtsNum()
-        {
-
-            if (input.Text.Length > 0)
-            {
-                int FirstNum;
-                input.Clear();
-
-                if (int.TryParse(input.Text, out FirstNum) == true)
-                {
-
-                    return FirstNum;
-                }
-
-                else {
-
-                    return 0;
-                }
-
-            }
-            else {
-                return 0;
-            }
-        }
 
 
         private void ButttonClicked(object sender, EventArgs e)
@@ -57,7 +30,6 @@ namespace WindowsFormsApp1
             string inputText;
             inputText = input.Text;
 
-            //MessageBox.Show(sender.ToString());
             switch (sender.ToString())
             {
                 case "System.Windows.Forms.Button, Text: 0":
@@ -103,7 +75,7 @@ namespace WindowsFormsApp1
                     operation = "n";
                     break;
                 case "System.Windows.Forms.Button, Text: +":
-                    num1 = GetFirtsNum();
+                    num1 = int.Parse(input.Text);
                     input.Clear();
                     operation = "+";
                     break;
