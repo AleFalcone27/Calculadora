@@ -295,7 +295,7 @@ namespace WindowsFormsApp1
             this.button18.TabIndex = 18;
             this.button18.Text = "=";
             this.button18.UseVisualStyleBackColor = false;
-            this.button18.Click += new System.EventHandler(this.ButttonClicked);
+            this.button18.Click += new System.EventHandler(this.Result);
             // 
             // textBox1
             // 

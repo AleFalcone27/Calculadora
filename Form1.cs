@@ -17,31 +17,38 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
-        /*
-        private int getFirtsNum()
-        {
 
+
+        int num1;
+        int num2;
+        string res;
+        string operation;
+
+        
+        private int GetFirtsNum()
+        {
 
             if (input.Text.Length > 0)
             {
-                if (int.TryParse(input.Text, out FirstNum) == false)
+                int FirstNum;
+                input.Clear();
+
+                if (int.TryParse(input.Text, out FirstNum) == true)
                 {
-                    throw new InvalidOperationException("ESTA CALCULADORA NO ADMITE LETRAS");
+
+                    return FirstNum;
                 }
-                
-                    
-                /*
-                 *  CATCHEAR EL ERROR DE CUANDO ESCRIBIMOS MUCHO
-                if (input.Text.Length > 5)
-                {
-                    input.Multiline = true;
-                    input.Height = 150;
+
+                else {
+
+                    return 0;
                 }
-                
-                
-        
+
             }
-        }*/
+            else {
+                return 0;
+            }
+        }
 
 
         private void ButttonClicked(object sender, EventArgs e)
@@ -88,15 +95,35 @@ namespace WindowsFormsApp1
                     if (inputText.Length > 0)
                     {
                         numsEraseLastChar = EraseNum(inputText);
-                        input.AppendText(numsEraseLastChar);
+                       input.AppendText(numsEraseLastChar);
                     }
                     break;
                 case "System.Windows.Forms.Button, Text: C":
                     input.Clear();
+                    operation = "n";
                     break;
                 case "System.Windows.Forms.Button, Text: +":
-                    //Sumar(inputText);
+                    num1 = GetFirtsNum();
+                    input.Clear();
+                    operation = "+";
                     break;
+                case "System.Windows.Forms.Button, Text: -":
+                    num1 = int.Parse(input.Text);
+                    input.Clear();
+                    operation = "-";
+                    break;
+                case "System.Windows.Forms.Button, Text: x":
+                    num1 = int.Parse(input.Text);
+                    input.Clear();
+                    operation = "x";
+                    break;
+                case "System.Windows.Forms.Button, Text: /":
+                    num1 = int.Parse(input.Text);
+                    input.Clear();
+                    operation = "/";
+                    break;
+
+
             }
         }
 
@@ -110,5 +137,32 @@ namespace WindowsFormsApp1
             return numsEraseLastChar;
         }
 
+
+        private void Result(object sender, EventArgs e)
+        {
+            num2 = int.Parse(input.Text);
+
+            if (operation == "+")
+            {
+                res = (num1 + num2).ToString();
+                input.Text = res;
+            }
+            if (operation == "-")
+            {
+                res = (num1 - num2).ToString();
+                input.Text = res;
+            }
+            if (operation == "x")
+            {
+                res = (num1 * num2).ToString();
+                input.Text = res;
+            }
+            if (operation == "/")
+            {
+                res = (num1 / num2).ToString();
+                input.Text = res;
+            }
+
+        }
     }
 }
